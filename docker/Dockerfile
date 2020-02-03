@@ -1,5 +1,5 @@
-FROM php:5.4.38-fpm
+FROM alpine
 
 
-RUN apk --update --no-cache add php5-ldap
+RUN apk --update --no-cache add php php-fpm php-ldap
 
