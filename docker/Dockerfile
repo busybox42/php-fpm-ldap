@@ -11,8 +11,6 @@ COPY php-fpm.conf /etc/php7/php-fpm.conf
 
 WORKDIR /var/www/html
 
-RUN ln -s /usr/bin/php7 /usr/bin/php
-
 EXPOSE 9000
 
 CMD ["php-fpm7", "-F"]
