@@ -9,6 +9,8 @@ RUN apk --update --no-cache add \
 COPY php.ini /etc/php7/conf.d/50-setting.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
 
+WORKDIR /var/www/html
+
 RUN ln -s /usr/bin/php7 /usr/bin/php
 
 EXPOSE 9000
