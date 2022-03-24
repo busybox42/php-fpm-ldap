@@ -9,10 +9,7 @@ FROM arm32v7/alpine:latest
 # Add QEMU
 COPY --from=builder qemu-arm-static /usr/bin
 
-RUN apk --update --no-cache add \
-	php \
-	php-fpm \
-	php-ldap
+RUN apk --update --no-cache add php php-fpm php-ldap
 
 COPY php.ini /etc/php7/conf.d/php.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
