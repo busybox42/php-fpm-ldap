@@ -1,6 +1,5 @@
 FROM alpine
 
-
 RUN apk --update --no-cache add \
 	php \
 	php-fpm \
@@ -15,4 +14,3 @@ WORKDIR /var/www/html
 EXPOSE 9000
 
 CMD ["php-fpm7", "-F"]
-
